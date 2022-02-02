@@ -11,18 +11,17 @@ var temp = Fahtenheit()
 print("The temperature is now \(temp.temperature)°")
 
 struct Celsius {
-    var temperatureInCelsius: Double
+    var temperature: Double
     init(fromFahrenheit fahrenheit: Double) {
-        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+        temperature = (fahrenheit - 32.0) / 1.8
     }
     init(fromKelvin kelvin: Double) {
-        temperatureInCelsius = kelvin - 273.15
+        temperature = kelvin - 273.15
     }
 }
 let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
 
 let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
-print(freezingPointOfWater)
+print("Quantion: What is the boiling point of water? Answer: \(boilingPointOfWater)")
 
-print(boilingPointOfWater)
